@@ -1,0 +1,155 @@
+.section {
+  padding: 8rem 2rem;
+  background: #0a0a0a;
+  border-top: 1px solid #111;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.label {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #e63946;
+  margin-bottom: 1.5rem;
+}
+
+.heading {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: #f0ece4;
+  margin-bottom: 4rem;
+}
+
+.heading span {
+  color: #e63946;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: #0f0f0f;
+  border: 1px solid #1a1a1a;
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.card:hover {
+  border-color: #e63946;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(230, 57, 70, 0.1);
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+.badge {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #4ade80;
+  background: rgba(74, 222, 128, 0.08);
+  border: 1px solid rgba(74, 222, 128, 0.2);
+  padding: 4px 10px;
+  border-radius: 100px;
+}
+
+.certTitle {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #f0ece4;
+  margin-top: 0.5rem;
+}
+
+.issuer {
+  font-size: 0.82rem;
+  color: #e63946;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.desc {
+  font-size: 0.88rem;
+  color: #4a4642;
+  line-height: 1.7;
+  flex: 1;
+}
+
+.cardFoot {
+  border-top: 1px solid #1a1a1a;
+  padding-top: 1rem;
+  margin-top: 0.5rem;
+}
+
+.verifiedLine {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  color: #3a3632;
+}
+
+.verifiedDot {
+  width: 6px;
+  height: 6px;
+  background: #4ade80;
+  border-radius: 50%;
+}
+
+.addCard {
+  border-style: dashed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  min-height: 220px;
+  cursor: default;
+  opacity: 0.4;
+}
+
+.addCard:hover {
+  border-color: #1a1a1a;
+  transform: none;
+  box-shadow: none;
+}
+
+.addIcon {
+  font-size: 2rem;
+  color: #3a3632;
+  font-family: 'Syne', sans-serif;
+}
+
+.addText {
+  font-size: 0.8rem;
+  color: #3a3632;
+  text-align: center;
+}

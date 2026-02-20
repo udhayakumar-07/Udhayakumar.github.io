@@ -1,0 +1,128 @@
+.section {
+  padding: 8rem 2rem;
+  background: #0a0a0a;
+  border-top: 1px solid #111;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.label {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #e63946;
+  margin-bottom: 1.5rem;
+}
+
+.heading {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: #f0ece4;
+  margin-bottom: 4rem;
+}
+
+.heading span {
+  color: #e63946;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.group {
+  background: #0d0d0d;
+  border: 1px solid #1a1a1a;
+  border-radius: 12px;
+  padding: 2rem;
+  transition: border-color 0.3s ease;
+}
+
+.group:hover {
+  border-color: rgba(230, 57, 70, 0.2);
+}
+
+.groupTitle {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #e63946;
+  margin-bottom: 1.2rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  font-size: 0.82rem;
+  padding: 6px 14px;
+  background: #141414;
+  border: 1px solid #1e1e1e;
+  border-radius: 6px;
+  color: #7a7672;
+  transition: all 0.2s ease;
+  cursor: default;
+}
+
+.tag:hover {
+  border-color: rgba(230, 57, 70, 0.3);
+  color: #f0ece4;
+  background: rgba(230, 57, 70, 0.05);
+}
+
+.softSection {
+  background: linear-gradient(135deg, #0d0d0d 0%, #0a0a0a 100%);
+  border: 1px solid #1a1a1a;
+  border-left: 3px solid #e63946;
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.softLabel {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #e63946;
+  margin-bottom: 1.2rem;
+}
+
+.softTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.softTag {
+  font-size: 0.82rem;
+  padding: 6px 16px;
+  background: transparent;
+  border: 1px solid #1e1e1e;
+  border-radius: 100px;
+  color: #5a5652;
+  transition: all 0.2s ease;
+  cursor: default;
+}
+
+.softTag:hover {
+  color: #f0ece4;
+  border-color: #3a3632;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

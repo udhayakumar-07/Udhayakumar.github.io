@@ -1,0 +1,217 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 7rem 2rem 4rem;
+}
+
+.grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(230, 57, 70, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(230, 57, 70, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+}
+
+.blob {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(ellipse, rgba(230, 57, 70, 0.15) 0%, transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: float 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -52%) scale(1.05); }
+}
+
+.content {
+  text-align: center;
+  max-width: 700px;
+  position: relative;
+  z-index: 1;
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #e63946;
+  border: 1px solid rgba(230, 57, 70, 0.3);
+  padding: 6px 16px;
+  border-radius: 100px;
+  margin-bottom: 2rem;
+  background: rgba(230, 57, 70, 0.05);
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background: #e63946;
+  border-radius: 50%;
+  animation: blink 2s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.name {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(3rem, 10vw, 6rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 1rem;
+  color: #f0ece4;
+}
+
+.name span {
+  color: #e63946;
+}
+
+.title {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #7a7672;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.desc {
+  font-size: 1rem;
+  color: #5a5652;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctas {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 3.5rem;
+}
+
+.primary {
+  background: #e63946;
+  color: #fff;
+  padding: 0.85rem 2rem;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  letter-spacing: 0.02em;
+}
+
+.primary:hover {
+  background: #c1121f;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(230, 57, 70, 0.35);
+}
+
+.secondary {
+  background: transparent;
+  color: #f0ece4;
+  padding: 0.85rem 2rem;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  border: 1px solid #2a2a2a;
+  transition: all 0.2s ease;
+  letter-spacing: 0.02em;
+}
+
+.secondary:hover {
+  border-color: #444;
+  background: #141414;
+  transform: translateY(-2px);
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.statNum {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #f0ece4;
+}
+
+.statLabel {
+  font-size: 0.72rem;
+  color: #4a4642;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.divider {
+  width: 1px;
+  height: 36px;
+  background: #1e1e1e;
+}
+
+.scrollHint {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: #2a2a2a;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.scrollLine {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, #e63946, transparent);
+  animation: scrollAnim 2s ease-in-out infinite;
+}
+
+@keyframes scrollAnim {
+  0% { transform: scaleY(0); transform-origin: top; }
+  50% { transform: scaleY(1); transform-origin: top; }
+  51% { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
